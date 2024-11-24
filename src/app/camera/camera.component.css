@@ -1,0 +1,15 @@
+.camera-container {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.camera-feed {
+  max-width: 90%;
+  max-height: 80vh;
+  border: 5px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,234 @@
+/* Contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Encabezados de sección */
+.section-container h2,
+.cochera-container h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Tarjetas principales */
+.control-card,
+.grid-card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-card:hover,
+.grid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos de las tarjetas */
+.control-card h3,
+.grid-card h3 {
+  margin-bottom: 10px;
+  color: #495057;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Estado de los LEDs */
+.control-card p,
+.grid-card p {
+  font-size: 16px;
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Contenedor en cuadrícula */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Botones generales */
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botones específicos */
+button.btn-on {
+  background-color: #28a745;
+}
+
+button.btn-on:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+button.btn-off {
+  background-color: #dc3545;
+}
+
+button.btn-off:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+button.btn-open {
+  background-color: #17a2b8;
+}
+
+button.btn-open:hover {
+  background-color: #138496;
+  transform: translateY(-2px);
+}
+
+button.btn-close {
+  background-color: #ffc107;
+}
+
+button.btn-close:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+/* Navbar fijo y ancho completo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Ajuste del contenido para compensar el navbar */
+.container {
+  margin-top: 80px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Separación entre secciones */
+.section-container {
+  margin-top: 40px;
+}
+
+.cochera-container {
+  margin-top: 30px;
+}
+
+/* Estilo general del body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Animaciones para hover */
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-card:hover,
+.grid-card:hover {
+  transform: scale(1.02);
+}
+
+.camera-link {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.camera-link:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* Navbar fijo y ancho completo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Asegura que ocupa todo el ancho de la ventana */
+  background-color: #007bff; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center;
+  padding: 15px 0; /* Espaciado vertical */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto flotante */
+  z-index: 1000; /* Mantenerlo encima del contenido */
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Ajuste del contenido para compensar el navbar */
+.container {
+  margin-top: 80px; /* Deja espacio para el navbar fijo */
+}
+
+/* Estilo general del body */
+body {
+  margin: 0; /* Quitar márgenes */
+  padding: 0; /* Quitar relleno */
+  font-family: 'Arial', sans-serif; /* Fuente básica */
+  background-color: #f8f9fa; /* Color de fondo */
+}

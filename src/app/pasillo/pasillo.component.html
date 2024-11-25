@@ -1,0 +1,15 @@
+<h2>Pasillo</h2>
+<div class="cards-container">
+  <div *ngFor="let i of [8, 9]" class="card">
+    <h3>Pasillo {{ i === 8 ? '1' : '2' }}</h3>
+    <div *ngIf="estadoLeds$ | async as estadoLeds">
+      <p>Estado: {{ estadoLeds['led' + i] === 1 ? 'Encendida' : 'Apagada' }}</p>
+      <div class="button-container">
+        <button (click)="toggleLed('led' + i, estadoLeds['led' + i], i === 8 ? 1 : 2)"
+                [ngClass]="estadoLeds['led' + i] === 1 ? 'btn-on' : 'btn-off'">
+          {{ estadoLeds['led' + i] === 1 ? 'Apagar' : 'Encender' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

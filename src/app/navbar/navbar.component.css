@@ -1,0 +1,67 @@
+/* Estilos para el navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Título en el navbar */
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Contenedor de los botones del navbar */
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 20px; /* Ajusta la posición de los botones */
+}
+
+/* Estilo para los botones */
+.navbar-button {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover y active de los botones */
+.navbar-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.navbar-button:active {
+  transform: translateY(2px);
+}
+
+/* Asegurar que el contenido no quede debajo del navbar */
+body {
+  margin: 0; /* Eliminar margen predeterminado */
+}
+
+/* Contenedor principal de contenido */
+.main-content {
+  margin-top: 80px; /* Añadir espacio suficiente para el navbar */
+}

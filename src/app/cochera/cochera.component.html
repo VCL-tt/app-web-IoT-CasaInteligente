@@ -1,0 +1,31 @@
+<h2>Cochera</h2>
+<div class="cards-container">
+  <!-- Tarjeta de la puerta -->
+  <div class="card">
+    <h3>Puerta de Cochera</h3>
+    <div *ngIf="estadoLeds$ | async as estadoLeds">
+      <p>Estado de la puerta: {{ estadoLeds['cochera'] === 1 ? 'Abierta' : 'Cerrada' }}</p>
+      <div class="button-container">
+        <button (click)="toggleCochera(estadoLeds['cochera'])"
+                [ngClass]="estadoLeds['cochera'] === 1 ? 'btn-on' : 'btn-off'">
+          {{ estadoLeds['cochera'] === 1 ? 'Cerrar Puerta' : 'Abrir Puerta' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjeta de la luz -->
+  <div class="card">
+    <h3>Luz de Cochera</h3>
+    <div *ngIf="estadoLeds$ | async as estadoLeds">
+      <p>Estado de la luz: {{ estadoLeds['led11'] === 1 ? 'Encendida' : 'Apagada' }}</p>
+      <div class="button-container">
+        <button (click)="toggleLed('led11', estadoLeds['led11'])"
+                [ngClass]="estadoLeds['led11'] === 1 ? 'btn-on' : 'btn-off'">
+          {{ estadoLeds['led11'] === 1 ? 'Apagar Luz' : 'Encender Luz' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

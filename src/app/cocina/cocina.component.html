@@ -1,0 +1,17 @@
+<div class="cocina-container">
+  <h2>Cocina</h2>
+  <div class="cards-container">
+    <!-- Card para la Luz de la Cocina -->
+    <div class="card">
+      <h3>Luz de la Cocina</h3>
+      <p *ngIf="estadoLeds$ | async as estadoLeds">Estado: {{ estadoLeds['led10'] === 1 ? 'Encendida' : 'Apagada' }}</p>
+      <div class="button-container">
+        <button 
+          *ngIf="estadoLeds$ | async as estadoLeds"
+          (click)="toggleLed('led10', estadoLeds['led10'])"
+          [ngClass]="estadoLeds['led10'] === 1 ? 'btn-off' : 'btn-on'">
+          {{ estadoLeds['led10'] === 1 ? 'Apagar' : 'Encender' }}
+        </button>
+      </div>
+    </div>
+  </div>

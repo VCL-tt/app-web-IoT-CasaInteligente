@@ -1,0 +1,10 @@
+<div class="historial-container">
+  <h2>Historial de Acciones</h2>
+  <ul>
+    <li *ngFor="let item of historial">
+      <strong>{{ item.fecha | date: 'short' }}</strong> - {{ item.mensaje }}
+    </li>
+  </ul>
+
+  <button class="btn-clear" (click)="limpiarHistorial()">Limpiar Historial</button>
+</div>

@@ -1,0 +1,15 @@
+<h2>Cuartos</h2>
+<div class="cards-container">
+  <div *ngFor="let i of [1, 2, 3]" class="card">
+    <h3>Cuarto {{ i }}</h3>
+    <div *ngIf="estadoLeds$ | async as estadoLeds">
+      <p>Estado: {{ estadoLeds['led' + i] === 1 ? 'Encendido' : 'Apagado' }}</p>
+      <div class="button-container">
+        <button (click)="toggleLed('led' + i, estadoLeds['led' + i], i)"
+                [ngClass]="estadoLeds['led' + i] === 1 ? 'btn-on' : 'btn-off'">
+          {{ estadoLeds['led' + i] === 1 ? 'Apagar' : 'Encender' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

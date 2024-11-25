@@ -1,0 +1,110 @@
+/* Estilo general para los pasillos */
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Contenedor de las tarjetas de pasillo */
+  .cards-container {
+    display: flex;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten si hay mucho contenido */
+    margin-top: 30px;
+  }
+  
+  /* Estilo para cada tarjeta de pasillo */
+  .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #495057;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  /* Estilo para los párrafos de estado */
+  p {
+    font-size: 18px;
+    color: #495057;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  
+  /* Estilo para los contenedores de botones */
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 10px; /* Ajusta el espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones se ajusten a varias líneas si es necesario */
+  }
+  
+  /* Estilo para los botones */
+  button {
+    padding: 8px 16px; /* Tamaño de los botones */
+    font-size: 14px;   /* Tamaño de la fuente */
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 120px;   /* Ancho mínimo de los botones */
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* Estilos de botones basados en el estado */
+  .btn-on {
+    background-color: #28a745; /* Verde cuando está encendido */
+    color: white;
+  }
+  
+  .btn-on:hover {
+    background-color: #218838;
+  }
+  
+  .btn-off {
+    background-color: #dc3545; /* Rojo cuando está apagado */
+    color: white;
+  }
+  
+  .btn-off:hover {
+    background-color: #c82333;
+  }
+  
+  /* Ajustes para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .card {
+      max-width: 100%;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    button {
+      padding: 8px 14px;
+      font-size: 12px;
+    }
+  }
+  

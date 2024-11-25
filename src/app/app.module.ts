@@ -11,7 +11,16 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Si usas formularios
 import { HttpClientModule } from '@angular/common/http'; // Si necesitas peticiones HTTP
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Para animaciones
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { CocheraComponent } from './cochera/cochera.component';
+import { CuartosComponent } from './cuartos/cuartos.component';
+import { SalaComponent } from './sala/sala.component';
+import { BanosComponent } from './banos/banos.component';
+import { PasilloComponent } from './pasillo/pasillo.component';
+import { CocinaComponent } from './cocina/cocina.component';
+import { HistorialComponent } from './historial/historial.component'; // Para animaciones
 
 const firebaseConfig = {
   apiKey: "AIzaSyBmtHEZ2dlIR3rXovYJo3LZ5Z57lryKYo8",
@@ -26,7 +35,16 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    CameraComponent // Declara todos los componentes que uses
+    CameraComponent,
+    NavbarComponent,
+    HomeComponent,
+    CocheraComponent,
+    CuartosComponent,
+    SalaComponent,
+    BanosComponent,
+    PasilloComponent,
+    CocinaComponent,
+    HistorialComponent // Declara todos los componentes que uses
   ],
   imports: [
     BrowserModule,

@@ -5,5 +5,5 @@
 <div class="camera-container">
   <h2>Vista de la Cámara</h2>
   <!-- Reemplaza la URL con la IP de tu ESP32 cuando esté disponible -->
-  <img class="camera-feed" src="http://<ESP32_IP>/stream" alt="Feed de la Cámara">
+  <img class="camera-feed" [src]="'http://' + esp32Ip " alt="Feed de la Cámara">
 </div>

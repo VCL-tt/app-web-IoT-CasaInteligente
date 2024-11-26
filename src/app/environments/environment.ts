@@ -8,7 +8,6 @@ export const environment = {
     storageBucket: "iothouse-38abb.firebasestorage.app",
     messagingSenderId: "337746927819",
     appId: "1:337746927819:android:a26eab9007017c3bb23b4e"
-  }
+  },
+  apiUrl: 'https://177c-38-25-34-42.ngrok-free.app' // URL de ngrok
 };
-
-

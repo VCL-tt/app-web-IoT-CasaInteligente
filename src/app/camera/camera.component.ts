@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-camera',
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./camera.component.css']
 })
 export class CameraComponent implements OnInit {
-  // Establecer la IP del ESP32 (puede cambiar dinámicamente si lo obtienes de algún otro servicio o backend)
-  esp32Ip: string = '192.168.122.251';  // Reemplaza con la IP dinámica si es necesario
+  // Dirección base de la cámara (puede ser una IP o URL de ngrok)
+  esp32Ip: string = 'nearby-relevant-bat.ngrok-free.app ';
+  videoUrl!: SafeResourceUrl; // URL segura para Angular
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit(): void {
-    // Aquí podrías agregar lógica para obtener la IP de tu ESP32 si es dinámica
+    // Construye y marca la URL como segura
+    const url = `https://${this.esp32Ip}`;
+    this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }
